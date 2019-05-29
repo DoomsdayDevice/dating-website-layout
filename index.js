@@ -14,9 +14,9 @@ function scrollToJoin(){
     window.scroll(0, signupX);
 }
 
-let burger = document.querySelector(".line-container");
-let menuLine = document.querySelector(".burger");
-let dropdown = document.querySelector(".dropdown");
+let burger = document.querySelector(".menu__burger__bars-container");
+let menuLine = document.querySelector(".menu__burger");
+let dropdown = document.querySelector(".menu__dropdown");
 menuLine.addEventListener("click", menuButtonPress);
 
 

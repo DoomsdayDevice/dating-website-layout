@@ -67,32 +67,30 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-end; }
+  .menu__burger {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer; }
+    .menu__burger span {
+      color: #45124c;
+      font-weight: bold; }
 
-.burger {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  cursor: pointer; }
-  .burger span {
-    color: #45124c;
-    font-weight: bold; }
-
-.line-container {
+.menu__burger__bars-container {
   display: flex;
   flex-direction: column;
   margin-left: 10px;
   opacity: .8; }
-  .line-container:hover {
+  .menu__burger__bars-container:hover {
     opacity: 1; }
+  .menu__burger__bars-container .menu__burger__bar {
+    width: 33px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #e22028;
+    margin-bottom: 5px; }
 
-.menu-line {
-  width: 33px;
-  height: 5px;
-  border-radius: 5px;
-  background-color: #e22028;
-  margin-bottom: 5px; }
-
-.dropdown {
+.menu__dropdown {
   /* border: 1px solid black; */
   width: 150px;
   background-color: white;
@@ -104,7 +102,7 @@ body {
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
   position: relative;
   border-radius: 3px; }
-  .dropdown::after {
+  .menu__dropdown::after {
     position: absolute;
     top: -10px;
     left: 80%;
@@ -123,14 +121,14 @@ body {
     /* border-color: transparent transparent white white; */
     /* transform-origin: 0 0; */
     /* transform: rotate(-45deg); */ }
-  .dropdown a {
+  .menu__dropdown a {
     display: block;
     text-decoration: none;
     color: #444;
     padding: 5px 10px; }
-    .dropdown a:hover {
+    .menu__dropdown a:hover {
       background-color: #e5faf7; }
-  .dropdown hr {
+  .menu__dropdown hr {
     margin: 5px 0;
     opacity: .5; }
 
@@ -162,7 +160,7 @@ body {
     opacity: 1;
     left: 0px; }
 
-.main-container {
+.main {
   max-width: 1270px;
   /* max-width: 100vw; */
   display: flex;
@@ -205,13 +203,13 @@ body {
     width: 100vw; } }
 
 /* TOP CONTAINER */
-.top-container {
+.main__top {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   /* border: 3px solid black; */ }
-  .top-container img {
+  .main__top img {
     max-width: 90vw; }
 
 .title {
