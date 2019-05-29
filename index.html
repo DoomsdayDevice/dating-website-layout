@@ -26,7 +26,7 @@
         </div>
 
         <main class="main">
-            <div class="menu">
+            <nav class="menu">
                 <div class="menu__burger">
                     <span>MENU</span>
                     <div class="menu__burger__bars-container">
@@ -35,7 +35,7 @@
                         <div class="menu__burger__bar"></div>
                     </div>
                 </div>
-                
+
                 <div class="menu__dropdown" >
                     <a href="#">My Profile</a>
                     <a href="#">My Messages</a>
@@ -44,7 +44,7 @@
                     <a href="#">Settings</a>
                     <a href="#">Log Out</a>
                 </div>
-            </div>
+            </nav>
 
             <section class="main__top">
                 <img src="images/logo.png" class="logo" alt="no pico">
@@ -61,13 +61,13 @@
             </section>
 
 
-            <img src="images/quote.png" class="quote" alt="no pico">
-            <section class="mid-container">
-                <img src="images/mid-left.png" class="mid-pic" alt="no pico">
-                <div class="sign-up">
+            <img class="quote" src="images/quote.png" alt="no pico">
+            <section class="main__mid">
+                <img class="main__mid__pic" src="images/mid-left.png" alt="no pico">
+                <div class="main__mid__sign-up">
                     <img src="images/join.png" alt="no pico">
 
-                    <div class="facebook btn">
+                    <div class="facebook-btn btn">
                         <img src="images/facebook-logo.png" alt="no pico">
                         <span>SIGN UP WITH FACEBOOK</span>
                     </div>
@@ -78,17 +78,17 @@
                     <input type="text" placeholder="Password">
                     <input type="text" placeholder="Confirm Password">
 
-                    <div class="letsgo btn">LET'S GO!</div>
+                    <div class="letsgo-btn btn">LET'S GO!</div>
                 </div>
-                <img src="images/mid-right.png" class="mid-pic" alt="no pico">
+                <img class="main__mid__pic" src="images/mid-right.png" alt="no pico">
             </section>
 
 
-            <section class="bottom-container">
-                <div class="bottom-background-pic">
+            <section class="main__bottom">
+                <div class="main__bottom__bg-pic">
                     <img src="images/bot-bg.png" alt="no pico">
                 </div>
-                <img src="images/circles.png" class="circles" alt="no pico">
+                <img class="main__bottom__circles-pic" src="images/circles.png" alt="no pico">
                 <div class="join-circle-wrapper">
                     <div class="join-circle">
                         <img src="images/join-circle-text.png" alt="no pico">
@@ -96,7 +96,7 @@
                     </div>
                 </div>
             </section>
-            <div class="newsletter">
+            <div class="subscribe-newsletter">
                 <p>Sign up for our newsletter</p>
                 <div>
                     <input type="text" placeholder="Email Address">
@@ -106,47 +106,49 @@
 
         </main>
 
-        <!-- footer -->
-        <ul class="footer-menu">
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">CONTACT</a></li>
-            <li><a href="#">FAQs</a></li>
-            <li><a href="#">BLOG</a></li>
-            <li><a href="#">ONLINE SAFETY</a></li>
-            <li><a href="#">PRIVACY POLICY</a></li>
-            <li><a href="#">TERMS OF USE</a></li>
-        </ul>
-        <ul class="flags">
-            <li> <img src="images/flags/vietnamese.png"> </li>
-            <li> <img src="images/flags/turkey.png"> </li>
-            <li> <img src="images/flags/thai.png"> </li>
-            <li> <img src="images/flags/croatian.png"> </li>
-            <li> <img src="images/flags/slovak.png"> </li>
-            <li> <img src="images/flags/danish.png"> </li>
-            <li> <img src="images/flags/romanian.png"> </li>
-            <li> <img src="images/flags/swedish.png"> </li>
-            <li> <img src="images/flags/polish.png"> </li>
-            <li> <img src="images/flags/russian.png"> </li>
-            <li> <img src="images/flags/norwegian.png"> </li>
-            <li> <img src="images/flags/portuguese.png"> </li>
-            <li> <img src="images/flags/korean.png"> </li>
-            <li> <img src="images/flags/spanish.png"> </li>
-            <li> <img src="images/flags/slovenian.png"> </li>
-            <li> <img src="images/flags/french.png"> </li>
-            <li> <img src="images/flags/arabic.png"> </li>
-            <li> <img src="images/flags/chinese.png"> </li>
-            <li> <img src="images/flags/dutch.png"> </li>
-            <li> <img src="images/flags/italian.png"> </li>
-            <li> <img src="images/flags/german.png"> </li>
-            <li> <img src="images/flags/japanese.png"> </li>
-            <li> <img src="images/flags/taiwanese.png"> </li>
-            <li> <img src="images/flags/english.png"> </li>
-            <li> <img src="images/flags/bosnian.png"> </li>
-            <li> <img src="images/flags/czech.png"> </li>
-            <li> <img src="images/flags/greek.png"> </li>
-        </ul>
-        <p class="copyright">&copy; 2017 All World Dating Enterprise Company LLC. All rights reserved.
-            We pledge never to share or sell your Email Address.</p>
+        <footer class="footer">
+            <ul class="footer__menu">
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">CONTACT</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">ONLINE SAFETY</a></li>
+                <li><a href="#">PRIVACY POLICY</a></li>
+                <li><a href="#">TERMS OF USE</a></li>
+            </ul>
+            <ul class="footer__flags">
+                <li> <img src="images/flags/vietnamese.png"> </li>
+                <li> <img src="images/flags/turkey.png"> </li>
+                <li> <img src="images/flags/thai.png"> </li>
+                <li> <img src="images/flags/croatian.png"> </li>
+                <li> <img src="images/flags/slovak.png"> </li>
+                <li> <img src="images/flags/danish.png"> </li>
+                <li> <img src="images/flags/romanian.png"> </li>
+                <li> <img src="images/flags/swedish.png"> </li>
+                <li> <img src="images/flags/polish.png"> </li>
+                <li> <img src="images/flags/russian.png"> </li>
+                <li> <img src="images/flags/norwegian.png"> </li>
+                <li> <img src="images/flags/portuguese.png"> </li>
+                <li> <img src="images/flags/korean.png"> </li>
+                <li> <img src="images/flags/spanish.png"> </li>
+                <li> <img src="images/flags/slovenian.png"> </li>
+                <li> <img src="images/flags/french.png"> </li>
+                <li> <img src="images/flags/arabic.png"> </li>
+                <li> <img src="images/flags/chinese.png"> </li>
+                <li> <img src="images/flags/dutch.png"> </li>
+                <li> <img src="images/flags/italian.png"> </li>
+                <li> <img src="images/flags/german.png"> </li>
+                <li> <img src="images/flags/japanese.png"> </li>
+                <li> <img src="images/flags/taiwanese.png"> </li>
+                <li> <img src="images/flags/english.png"> </li>
+                <li> <img src="images/flags/bosnian.png"> </li>
+                <li> <img src="images/flags/czech.png"> </li>
+                <li> <img src="images/flags/greek.png"> </li>
+            </ul>
+            <p class="footer__copyright">&copy; 2017 All World Dating Enterprise Company LLC. All rights reserved.
+                We pledge never to share or sell your Email Address.</p>
+
+        </footer>
 
         <script src="index.js"></script>
     </body>
