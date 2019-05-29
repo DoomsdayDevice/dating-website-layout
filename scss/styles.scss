@@ -15,11 +15,17 @@ $colors: (
 
 );
 $main-width: 1270px;
+$desktop: 992px;
 $font: "bpreplayregular";
 $font-bold: "bpreplaybold";
 
 @function color($color-name){
     @return map-get($colors, $color-name);
+}
+@mixin desktop {
+    @media(min-width: #{$main-width}){
+        @content;
+    }
 }
 
 * {
@@ -108,8 +114,10 @@ body {
 /* MENU */
 .menu {
     position: absolute;
-    top: 50px;
-    left: calc(95% - 120px);
+    top: 30px;
+    padding-right: 20px;
+    // left: calc(95% - 120px);
+    align-self: flex-end;
     z-index: 2;
 
     display: flex;
@@ -218,18 +226,24 @@ body {
 
 
 .main {
-    max-width: $main-width;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
+    max-width: 100%;
+    overflow: hidden;
+
     position: relative;
+    @include desktop{
+        max-width: $main-width;
+    }
 }
 
 /* TOP PIC */
-.top-pic-container {
-    height: 900px;
+.top-pic {
+    // height: 900px;
+    margin-top: 40px;
     width: 100%;
     overflow:hidden;
     display: flex;
@@ -237,24 +251,19 @@ body {
     align-items: center;
     justify-content: center;
 
-    position: absolute;
-}
-.top-pic {
-    position: absolute;
-    min-width: 100%;
-    opacity: .6;
-    z-index: -1;
-}
-@media (max-width: $main-width){
-    .top-pic{
-        position: absolute;
-        left: -50vw;
+    position: fixed;
+
+    img {
+        // position: absolute;
+        max-width: 100%;
         opacity: .6;
         z-index: -1;
     }
-    .menu {
-        left: calc(95% - 180px);
-    }
+}
+@media (max-width: $main-width){
+    // .menu {
+    //     left: calc(95% - 180px);
+    // }
     .main-container {
         width: 100vw;
     }

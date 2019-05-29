@@ -6,11 +6,10 @@ joinButton.addEventListener("click", scrollToJoin);
 function scrollToJoin(){
     let locationOfJoin = 500;
     // let quote = document.querySelector(".quote");
-    let signup = document.querySelector(".sign-up");
+    let signup = document.querySelector(".main__mid__sign-up");
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
     let signupX = signup.getBoundingClientRect().top + scrollTop - 280;
-    console.log("quote X:", signupX);
     window.scroll(0, signupX);
 }
 
@@ -32,3 +31,28 @@ function menuButtonPress(){
         dropdown.style.opacity = "0";
     }
 }
+
+let scrollTop;
+let pic = document.querySelector('.top-pic');
+let point = 760;
+function handleScroll(){
+    let picHeight = parseInt(getComputedStyle(pic).height);
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    console.log("scrollTop:", scrollTop);
+    console.log("picHeight:", picHeight);
+
+
+    let picBottom = scrollTop + 30 + picHeight;
+    console.log("picBottom:", picBottom);
+
+    // when bottom of pic touches point
+    if (picBottom > point){
+        pic.style.position = 'absolute';
+        pic.style.top = point - picHeight + 'px';
+    } else {
+        pic.style.position = 'fixed';
+        pic.style.top = 30 + 'px';
+    }
+
+}
+document.addEventListener('scroll', handleScroll);
