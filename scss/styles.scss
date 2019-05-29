@@ -293,63 +293,65 @@ body {
     img{
         max-width: 90vw;
     }
-}
-.title {
-    margin-top: 70px;
-    width: 800px;
-}
-.logo{
-    width: 300px;
-    margin-top: 160px;
-}
-.start-button {
-    background-color: purple;
-    padding: 5px 13px;
-    border-radius: inherit;
-    color: white;
-    font-size: 15px;
 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-
-    img {
-        width: 40px;
-        height: auto;
-        display: inline-block;
-        transform: rotate(90deg);
+    &__title {
+        margin-top: 70px;
+        width: 800px;
     }
-}
-.start-button-wrapper {
-    margin-top: 50px;
-
-    padding: 10px;
-    background-color: transparent;
-
-    border: 2px solid purple;
-    border-radius: 150px;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
-    opacity: .7;
-
-    &:hover{
-        opacity: 1;
-        background: radial-gradient(purple, transparent);
+    &__logo{
+        width: 300px;
+        margin-top: 160px;
     }
+    &__start-btn {
+        margin-top: 50px;
+
+        padding: 10px;
+        background-color: transparent;
+
+        border: 2px solid purple;
+        border-radius: 150px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        opacity: .7;
+
+        &:hover{
+            opacity: 1;
+            background: radial-gradient(purple, transparent);
+        }
+
+        .btn {
+            background-color: purple;
+            padding: 5px 13px;
+            border-radius: inherit;
+            color: white;
+            font-size: 15px;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            img {
+                width: 40px;
+                height: auto;
+                display: inline-block;
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+
+    &__cards{
+        width: 500px;
+        margin-top: 175px;
+    }
+
 }
-
-
-.cards{
-    width: 500px;
-    margin-top: 175px;
-}
-
 /* MID CONTAINER */
 
 .quote {

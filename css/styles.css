@@ -184,50 +184,45 @@ body {
   align-items: center; }
   .main__top img {
     max-width: 90vw; }
-
-.title {
-  margin-top: 70px;
-  width: 800px; }
-
-.logo {
-  width: 300px;
-  margin-top: 160px; }
-
-.start-button {
-  background-color: purple;
-  padding: 5px 13px;
-  border-radius: inherit;
-  color: white;
-  font-size: 15px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer; }
-  .start-button img {
-    width: 40px;
-    height: auto;
-    display: inline-block;
-    transform: rotate(90deg); }
-
-.start-button-wrapper {
-  margin-top: 50px;
-  padding: 10px;
-  background-color: transparent;
-  border: 2px solid purple;
-  border-radius: 150px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  opacity: .7; }
-  .start-button-wrapper:hover {
-    opacity: 1;
-    background: radial-gradient(purple, transparent); }
-
-.cards {
-  width: 500px;
-  margin-top: 175px; }
+  .main__top__title {
+    margin-top: 70px;
+    width: 800px; }
+  .main__top__logo {
+    width: 300px;
+    margin-top: 160px; }
+  .main__top__start-btn {
+    margin-top: 50px;
+    padding: 10px;
+    background-color: transparent;
+    border: 2px solid purple;
+    border-radius: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    opacity: .7; }
+    .main__top__start-btn:hover {
+      opacity: 1;
+      background: radial-gradient(purple, transparent); }
+    .main__top__start-btn .btn {
+      background-color: purple;
+      padding: 5px 13px;
+      border-radius: inherit;
+      color: white;
+      font-size: 15px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer; }
+      .main__top__start-btn .btn img {
+        width: 40px;
+        height: auto;
+        display: inline-block;
+        transform: rotate(90deg); }
+  .main__top__cards {
+    width: 500px;
+    margin-top: 175px; }
 
 /* MID CONTAINER */
 .quote {

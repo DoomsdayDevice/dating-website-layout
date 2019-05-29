@@ -1,4 +1,4 @@
-let startButton = document.querySelector(".start-button");
+let startButton = document.querySelector(".main__top__start-btn .btn");
 startButton.addEventListener("click", scrollToJoin);
 let joinButton = document.querySelector(".join-circle-button");
 joinButton.addEventListener("click", scrollToJoin);
