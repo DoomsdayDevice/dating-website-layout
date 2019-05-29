@@ -27,6 +27,16 @@ $font-bold: "bpreplaybold";
         @content;
     }
 }
+@mixin tiny{
+    @media (min-width: 360px){
+        @content;
+    }
+}
+@mixin medium{
+    @media(min-width: 500px){
+        @content;
+    }
+}
 
 * {
     padding: 0;
@@ -197,7 +207,7 @@ body {
 
 .social {
     position: fixed;
-    left: -35px;
+    left: -50px;
     top: 40%;
     background-color: color(purple-medium);
     z-index: 2;
@@ -210,6 +220,12 @@ body {
     border-radius: 0 5px 5px 0;
     opacity: .8;
     transition: left .5s, opacity .5s;
+    @include medium{
+        left: -25px;
+    }
+    @include desktop{
+        left: 0;
+    }
 
     img{
         height: auto;
@@ -232,7 +248,6 @@ body {
     justify-content: center;
 
     max-width: 100%;
-    overflow: hidden;
 
     position: relative;
     @include desktop{
@@ -357,7 +372,10 @@ body {
 
 }
 .main__mid__pic{
-    max-width: 40%;
+    max-width: 90%;
+    @include desktop{
+        max-width: 40%
+    }
 }
 /* SIGNUP */
 
@@ -429,6 +447,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    max-width: 100%;
 }
 .main__bottom__bg-pic {
     z-index: -1;
@@ -465,6 +485,7 @@ body {
 
     margin-left: auto;
     margin-right: auto;
+    max-width: 80%;
 
     border-radius: 100%;
     border: 1px solid color(grey-light);
@@ -513,25 +534,38 @@ body {
 
     div {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+
+        @include tiny{
+            flex-direction: row;
+        }
     }
     p {
         font-size: 20px;
         font-weight: bold;
         user-select: none;
     }
+
     input {
-        margin-left: 10px;
         height: 40px;
         width: 250px;
-        border-radius: 5px 0 0 5px;
-        border-right-width: 0;
+        border-radius: 5px;
+        margin-top: 5px;
+        @include tiny{
+            margin-left: 10px;
+            border-radius: 5px 0 0 5px;
+            border-right-width: 0;
+        }
     }
     .btn{
         padding: 0 10px;
         background-color: color(green);
-        border-radius: 0 5px 5px 0;
+        border-radius: 5px;
+        margin-top: 5px;
         height: 44px;
+        @include tiny{
+            border-radius: 0 5px 5px 0;
+        }
     }
 }
 @media (max-width:1000px){
@@ -555,7 +589,7 @@ body {
         width: 100%;
 
         background-color: color(light);
-        padding: 15px;
+        padding: 15px 0;
 
         display: flex;
         flex-direction: row;
@@ -574,7 +608,12 @@ body {
             cursor: pointer;
         }
         li{
-            margin-left: 50px;
+            display: block;
+            margin: 5px;
+            @include desktop{
+                margin-left: 50px;
+                display: inline;
+            }
         }
     }
     .footer__flags {

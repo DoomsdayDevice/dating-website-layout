@@ -38,17 +38,17 @@ let point = 760;
 function handleScroll(){
     let picHeight = parseInt(getComputedStyle(pic).height);
     scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    console.log("scrollTop:", scrollTop);
-    console.log("picHeight:", picHeight);
-
 
     let picBottom = scrollTop + 30 + picHeight;
-    console.log("picBottom:", picBottom);
 
     // when bottom of pic touches point
     if (picBottom > point){
         pic.style.position = 'absolute';
-        pic.style.top = point - picHeight + 'px';
+        if (innerWidth > 1270){
+            pic.style.top = '0';
+        } else {
+            pic.style.top = point - picHeight + 'px';
+        }
     } else {
         pic.style.position = 'fixed';
         pic.style.top = 30 + 'px';
@@ -56,3 +56,4 @@ function handleScroll(){
 
 }
 document.addEventListener('scroll', handleScroll);
+document.addEventListener('resize', handleScroll);
