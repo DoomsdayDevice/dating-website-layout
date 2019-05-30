@@ -1,26 +1,26 @@
-let startButton = document.querySelector(".main__top__start-btn .btn");
+const startButton = document.querySelector(".top__start-btn .btn");
 startButton.addEventListener("click", scrollToJoin);
-let joinButton = document.querySelector(".join-circle-button");
+const joinButton = document.querySelector(".bottom__join-circle-btn");
 joinButton.addEventListener("click", scrollToJoin);
 
 function scrollToJoin(){
-    let locationOfJoin = 500;
+    const locationOfJoin = 500;
     // let quote = document.querySelector(".quote");
-    let signup = document.querySelector(".main__mid__sign-up");
+    const signup = document.querySelector(".mid__sign-up");
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
     let signupX = signup.getBoundingClientRect().top + scrollTop - 280;
     window.scroll(0, signupX);
 }
 
-let burger = document.querySelector(".menu__burger__bars-container");
-let menuLine = document.querySelector(".menu__burger");
-let dropdown = document.querySelector(".menu__dropdown");
-menuLine.addEventListener("click", menuButtonPress);
+const burger = document.querySelector(".burger__bars");
+const menuLine = document.querySelector(".menu__burger");
+const dropdown = document.querySelector(".menu__dropdown");
+menuLine.addEventListener("click", handleMenuButtonPress);
 
 
 let menuIsOpen = false;
-function menuButtonPress(){
+function handleMenuButtonPress(){
     if (!menuIsOpen){
         burger.style.transform = "rotate(-90deg)";
         menuIsOpen = true;
@@ -33,8 +33,8 @@ function menuButtonPress(){
 }
 
 let scrollTop;
-let pic = document.querySelector('.top-pic');
-let point = 760;
+const pic = document.querySelector('.top__main-pic');
+const point = 760;
 function handleScroll(){
     let picHeight = parseInt(getComputedStyle(pic).height);
     scrollTop = window.pageYOffset || document.documentElement.scrollTop;

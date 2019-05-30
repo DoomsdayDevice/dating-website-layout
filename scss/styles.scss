@@ -145,7 +145,7 @@ body {
         }
     }
 }
-.menu__burger__bars-container {
+.burger__bars {
     display: flex;
     flex-direction: column;
 
@@ -155,7 +155,7 @@ body {
     &:hover{
         opacity: 1;
     }
-    .menu__burger__bar {
+    .burger__bar {
         width: 33px;
         height: 5px;
         border-radius: 5px;
@@ -256,7 +256,7 @@ body {
 }
 
 /* TOP PIC */
-.top-pic {
+.top__main-pic {
     // height: 900px;
     margin-top: 40px;
     width: 100%;
@@ -275,14 +275,7 @@ body {
         z-index: -1;
     }
 }
-@media (max-width: $main-width){
-    // .menu {
-    //     left: calc(95% - 180px);
-    // }
-    .main-container {
-        width: 100vw;
-    }
-}
+
 /* TOP CONTAINER */
 .main__top {
     position: relative;
@@ -294,15 +287,15 @@ body {
         max-width: 90vw;
     }
 
-    &__title {
+    .top__title {
         margin-top: 70px;
         width: 800px;
     }
-    &__logo{
+    .top__logo{
         width: 300px;
         margin-top: 160px;
     }
-    &__start-btn {
+    .top__start-btn {
         margin-top: 50px;
 
         padding: 10px;
@@ -346,7 +339,7 @@ body {
     }
 
 
-    &__cards{
+    .top__cards{
         width: 500px;
         margin-top: 175px;
     }
@@ -360,20 +353,17 @@ body {
 }
 .main__mid{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
     margin-top: 100px;
-    flex-flow: row nowrap;
     align-items: center;
     width: 100%;
-}
-@media(max-width: 1100px){
-    .main__mid{
-        flex-direction: column;
-    }
 
+    @include desktop{
+        flex-direction: row;
+    }
 }
-.main__mid__pic{
+.mid__pic{
     max-width: 90%;
     @include desktop{
         max-width: 40%
@@ -381,7 +371,7 @@ body {
 }
 /* SIGNUP */
 
-.main__mid__sign-up{
+.mid__sign-up{
 
     display: flex;
     flex-direction: column;
@@ -418,7 +408,7 @@ body {
         height: 30px;
     }
 
-    .facebook-btn {
+    .sign-up__facebook-btn {
         margin-top: 10px;
         display: flex;
         flex-direction: row;
@@ -432,7 +422,7 @@ body {
     }
 
 
-    .letsgo-btn {
+    .sign-up__letsgo-btn {
         margin-top: 10px;
 
         background-color: color(purple);
@@ -452,7 +442,7 @@ body {
 
     max-width: 100%;
 }
-.main__bottom__bg-pic {
+.bottom__bg-pic {
     z-index: -1;
     position: absolute;
     width: 100vw;
@@ -471,7 +461,7 @@ body {
         min-height: 100%;
     }
 }
-.main__bottom__circles-pic {
+.bottom__circles-pic {
     margin-top: 20px;
     margin-bottom: 20px;
     min-width: $main-width;
@@ -482,7 +472,7 @@ body {
 
 
 /* JOIN CIRCLE */
-.join-circle-wrapper{
+.bottom__join-circle-wrapper{
     position: absolute;
 
     margin-left: auto;
@@ -495,7 +485,7 @@ body {
     padding: 30px;
     opacity: .8;
 
-    .join-circle {
+    .bottom__join-circle {
         height: 250px;
         width: 250px;
         background-color: white;
@@ -516,7 +506,7 @@ body {
         opacity: 1;
     }
 
-    .join-circle-button {
+    .bottom__join-circle-btn {
         margin-top: 20px;
         background-color: color(red);
         padding: 10px;
@@ -570,18 +560,6 @@ body {
         }
     }
 }
-@media (max-width:1000px){
-    .newsletter{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        color: color(green);
-    }
-    .newsletter p {
-        margin-bottom: 5px;
-    }
-}
 
 
 /* FOOTER  */
@@ -618,7 +596,7 @@ body {
             }
         }
     }
-    .footer__flags {
+    &__flags {
         list-style: none;
         padding: 10px;
 
@@ -637,7 +615,7 @@ body {
         }
     }
 
-    .footer__copyright{
+    &__copyright{
         margin-top: 20px;
         text-align: center;
 
