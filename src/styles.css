@@ -157,27 +157,18 @@ body {
     .main {
       max-width: 1270px; } }
 
-/* TOP PIC */
-.top__main-pic {
-  margin-top: 40px;
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: fixed; }
-  .top__main-pic img {
-    max-width: 100%;
-    opacity: .6;
-    z-index: -1; }
-
 /* TOP CONTAINER */
 .main__top {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center; }
+  .main__top .top__main-pic {
+    position: sticky;
+    top: 80px;
+    max-width: 100%;
+    opacity: .6;
+    z-index: -1; }
   .main__top img {
     max-width: 90vw; }
   .main__top .top__title {

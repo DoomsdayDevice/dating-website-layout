@@ -35,25 +35,3 @@ function handleMenuButtonPress(){
 let scrollTop;
 const pic = document.querySelector('.top__main-pic');
 const point = 760;
-function handleScroll(){
-    let picHeight = parseInt(getComputedStyle(pic).height);
-    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-    let picBottom = scrollTop + 30 + picHeight;
-
-    // when bottom of pic touches point
-    if (picBottom > point){
-        pic.style.position = 'absolute';
-        if (innerWidth > 1270){
-            pic.style.top = '0';
-        } else {
-            pic.style.top = point - picHeight + 'px';
-        }
-    } else {
-        pic.style.position = 'fixed';
-        pic.style.top = 30 + 'px';
-    }
-
-}
-document.addEventListener('scroll', handleScroll);
-document.addEventListener('resize', handleScroll);
