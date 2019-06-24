@@ -262,13 +262,25 @@ body {
   flex-direction: column;
   align-items: center;
 
+  .top__main-pic__container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    height: 100%;
+    margin-left: -50vw;
+    // overflow: hidden;
+  }
   .top__main-pic {
     // height: 200px;
     position: sticky;
     top: 80px;
-    max-width: 100%;
+    min-width: 100vw;
     opacity: .6;
     z-index: -1;
+    // margin: 0 auto;
+    // left: 500px;
+    // margin-left: -50vw;
   }
 
   img{
@@ -277,7 +289,8 @@ body {
 
   .top__title {
     margin-top: 70px;
-    width: 800px;
+    max-width: 800px;
+    max-width: 95vw;
   }
   .top__logo{
     width: 300px;
@@ -328,7 +341,8 @@ body {
 
 
   .top__cards{
-    width: 500px;
+    max-width: 500px;
+    max-width: 95vw;
     margin-top: 175px;
   }
 
@@ -456,6 +470,10 @@ body {
   max-width: $main-width;
   height: auto;
 
+  visibility: hidden;
+  @include desktop {
+    visibility: visible;
+  }
 }
 
 
